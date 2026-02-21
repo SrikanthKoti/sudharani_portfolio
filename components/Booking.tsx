@@ -11,10 +11,10 @@ interface BookingProps {
 export function Booking({ data }: BookingProps) {
   return (
     <section
-      className="px-6 md:px-20 lg:px-40 py-20 bg-primary/5"
+      className="bg-primary/5"
       id="booking"
     >
-      <Container className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-auto md:px-10 py-20 px-5">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <SectionHeading label={data.label} title={data.title} />

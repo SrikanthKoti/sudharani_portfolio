@@ -9,8 +9,8 @@ interface MethodologyProps {
 
 export function Methodology({ data }: MethodologyProps) {
   return (
-    <section className="px-6 md:px-20 lg:px-40 py-20 bg-background-light dark:bg-background-dark">
-      <Container>
+    <section className="bg-background-light dark:bg-background-dark">
+      <Container className="mx-auto md:px-10 py-20 px-5">
         <div className="text-center mb-16">
           <SectionHeading
             label={data.label}

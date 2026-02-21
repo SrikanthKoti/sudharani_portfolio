@@ -12,27 +12,27 @@ interface HeroProps {
 export function Hero({ data, site }: HeroProps) {
   return (
     <section
-      className="relative px-6 md:px-20 lg:px-40 py-16 md:py-24"
+      className="relative w-full mx-auto max-w-7xl px-5 md:px-10 py-20"
       id="home"
     >
       <div className="absolute inset-0 math-pattern pointer-events-none" />
       <Container className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-        <div className="flex flex-col gap-8 order-2 lg:order-1">
-          <div className="flex flex-wrap gap-3">
+        <div className="flex flex-col items-center lg:items-start gap-8 order-2 lg:order-1">
+          <div className="flex sm:flex-wrap sm:flex-row flex-col gap-3">
             {data.badges.map((badge) => (
               <Badge key={badge.label} icon={badge.icon} label={badge.label} />
             ))}
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-center lg:text-start">
             <h1 className="text-[#111418] dark:text-white text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
               {data.headline}{" "}
               <span className="text-primary italic">{data.highlightText}</span>
             </h1>
-            <p className="text-[#4f5b66] dark:text-gray-400 text-lg md:text-xl font-normal leading-relaxed max-w-[600px]">
+            <p className="text-[#4f5b66] dark:text-gray-400 text-lg md:text-xl font-normal leading-relaxed">
               {data.subtext}
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 mt-2">
+          <div className="flex sm:flex-row flex-col gap-4 mt-2">
             <Button href={data.ctaPrimary.href}>{data.ctaPrimary.label}</Button>
             <Button href={data.ctaSecondary.href} variant="secondary">
               {data.ctaSecondary.label}

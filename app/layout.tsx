@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${lexend.variable} font-display antialiased bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200`}
       >
-        <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div className="relative flex min-h-screen w-full flex-col">
           {children}
         </div>
       </body>

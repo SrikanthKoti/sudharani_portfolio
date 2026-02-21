@@ -11,10 +11,10 @@ interface CurriculumProps {
 export function Curriculum({ data }: CurriculumProps) {
   return (
     <section
-      className="px-6 md:px-20 lg:px-40 py-20 bg-white dark:bg-gray-900/50"
+      className="bg-white dark:bg-gray-900/50"
       id="curriculum"
     >
-      <Container>
+      <Container className="mx-auto md:px-10 py-20 px-5">
         <div className="flex flex-col gap-4 mb-12">
           <SectionHeading label={data.label} title={data.title} />
         </div>

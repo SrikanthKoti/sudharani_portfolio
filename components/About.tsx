@@ -11,10 +11,10 @@ interface AboutProps {
 export function About({ data }: AboutProps) {
   return (
     <section
-      className="px-6 md:px-20 lg:px-40 py-20 bg-white dark:bg-gray-900/50"
+      className="bg-white dark:bg-gray-900/50"
       id="about"
     >
-      <Container className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <Container className="mx-auto md:px-10 py-20 px-5 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="flex flex-col gap-6">
           <SectionHeading label={data.label} title={data.title} />
           <p className="text-[#617589] dark:text-gray-400 leading-relaxed text-lg">

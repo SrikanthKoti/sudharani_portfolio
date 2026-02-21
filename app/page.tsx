@@ -27,6 +27,7 @@ export default function Home() {
         data={data.footer}
         siteName={data.site.name}
         logoIcon={data.site.logoIcon}
+
       />
     </>
   );
