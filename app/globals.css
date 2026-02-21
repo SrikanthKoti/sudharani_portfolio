@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-lexend), sans-serif;
+  scroll-behavior: smooth;
+}
+
+.math-pattern {
+  background-image: radial-gradient(#137fec 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
