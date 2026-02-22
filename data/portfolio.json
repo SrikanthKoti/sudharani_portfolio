@@ -14,7 +14,7 @@
       { "href": "#booking", "label": "Book Demo" },
       { "href": "#contact", "label": "Contact" }
     ],
-    "ctaLabel": "Book class"
+    "ctaLabel": "Book demo"
   },
   "hero": {
     "badges": [
@@ -187,6 +187,8 @@
     "formGradeLabel": "Student Grade",
     "formEmailLabel": "Email Address",
     "formEmailPlaceholder": "Email",
+    "formPhoneLabel": "Phone Number",
+    "formPhonePlaceholder": "Enter phone number",
     "formMessageLabel": "Message",
     "formMessagePlaceholder": "How can I help you?",
     "formSubmitLabel": "Send Message"

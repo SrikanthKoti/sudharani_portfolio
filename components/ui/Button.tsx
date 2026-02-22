@@ -7,6 +7,7 @@ interface ButtonProps {
   className?: string;
   type?: "button" | "submit";
   fullWidth?: boolean;
+  disabled?: boolean;
 }
 
 export function Button({
@@ -16,6 +17,7 @@ export function Button({
   className = "",
   type = "button",
   fullWidth = false,
+  disabled = false,
 }: ButtonProps) {
   const base =
     "flex cursor-pointer items-center justify-center font-bold transition-all";
@@ -36,7 +38,7 @@ export function Button({
     return <Link href={href} className={combined}>{children}</Link>;
   }
   return (
-    <button type={type} className={combined}>
+    <button type={type} className={combined} disabled={disabled}>
       {children}
     </button>
   );

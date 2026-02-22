@@ -122,6 +122,8 @@ export interface Contact {
   formGradeLabel: string;
   formEmailLabel: string;
   formEmailPlaceholder: string;
+  formPhoneLabel: string;
+  formPhonePlaceholder: string;
   formMessageLabel: string;
   formMessagePlaceholder: string;
   formSubmitLabel: string;
