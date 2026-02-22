@@ -43,8 +43,10 @@ export function Footer({ data, siteName, logoIcon }: FooterProps) {
               <a
                 key={social.icon}
                 href={social.href}
+                target={social.href.startsWith("http") ? "_blank" : undefined}
+                rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="size-10 rounded-full bg-primary/5 flex items-center justify-center text-[#617589] hover:bg-primary hover:text-white transition-all"
-                aria-label={social.icon}
+                aria-label={social.icon === "mail" ? "Email" : "Open in Google Maps"}
               >
                 <Icon name={social.icon} className="text-sm" />
               </a>

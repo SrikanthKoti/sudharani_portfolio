@@ -21,14 +21,14 @@ export function Header({ site, nav }: HeaderProps) {
     ${scrollPosition > 0 ? "border-b shadow-lg" : ""}`}>
       <div className="max-w-7xl mx-auto px-5 md:px-10 relative py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <Link href="#home" className="flex items-center gap-3">
             <div className="size-8 bg-primary rounded flex items-center justify-center text-white">
               <Icon name={site.logoIcon} className="text-white" />
             </div>
             <h2 className="text-[#111418] dark:text-white lg:text-lg font-bold leading-tight tracking-tight w-fit">
               {site.name}
             </h2>
-          </div>
+          </Link>
           <nav className="hidden md:flex items-cente gap-8 lg:gap-10">
             {nav.links.map((link) => (
                 <Link

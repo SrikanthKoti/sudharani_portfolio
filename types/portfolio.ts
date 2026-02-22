@@ -98,6 +98,8 @@ export interface Booking {
   calendarPlaceholder: string;
   calendarLabel: string;
   calendarUrl?: string;
+  /** Calendly inline widget URL (e.g. https://calendly.com/your-page/30min?primary_color=137fec) */
+  calendlyUrl?: string;
 }
 
 export interface ContactItem {
@@ -105,6 +107,8 @@ export interface ContactItem {
   label: string;
   value: string;
   type: "email" | "phone" | "whatsapp";
+  /** Optional link (e.g. mailto:email or maps URL). When set, the item is clickable. */
+  href?: string;
 }
 
 export interface Contact {

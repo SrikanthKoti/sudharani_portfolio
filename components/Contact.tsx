@@ -43,32 +43,45 @@ export function Contact({ data }: ContactProps) {
               </p>
             </div>
             <div className="flex flex-col gap-6">
-              {data.items.map((item) => (
-                <div
-                  key={item.label}
-                  className={`flex items-center gap-4 group cursor-pointer ${
-                    item.type === "whatsapp"
-                      ? ""
-                      : ""
-                  }`}
-                >
-                  <div
-                    className={`size-12 rounded-full flex items-center justify-center transition-all ${
-                      item.type === "whatsapp"
-                        ? "bg-green-500/10 text-green-600 group-hover:bg-green-600 group-hover:text-white"
-                        : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
-                    }`}
+              {data.items.map((item) => {
+                const href = item.href;
+                const isExternal = href?.startsWith("http");
+                const Wrapper = href ? "a" : "div";
+                const wrapperProps = href
+                  ? {
+                      href,
+                      ...(isExternal && {
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                      }),
+                    }
+                  : {};
+                return (
+                  <Wrapper
+                    key={item.label}
+                    className={`flex items-center gap-4 group cursor-pointer ${
+                      href ? "hover:opacity-90" : ""
+                    } ${item.type === "whatsapp" ? "" : ""}`}
+                    {...wrapperProps}
                   >
-                    <Icon name={item.icon} />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase text-[#617589]">
-                      {item.label}
-                    </p>
-                    <p className="font-bold">{item.value}</p>
-                  </div>
-                </div>
-              ))}
+                    <div
+                      className={`size-12 rounded-full flex items-center justify-center transition-all ${
+                        item.type === "whatsapp"
+                          ? "bg-green-500/10 text-green-600 group-hover:bg-green-600 group-hover:text-white"
+                          : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
+                      }`}
+                    >
+                      <Icon name={item.icon} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold uppercase text-[#617589]">
+                        {item.label}
+                      </p>
+                      <p className="font-bold">{item.value}</p>
+                    </div>
+                  </Wrapper>
+                );
+              })}
             </div>
           </div>
           <div className="bg-background-light dark:bg-background-dark p-8 rounded-3xl border border-[#dbe0e6] dark:border-gray-800">

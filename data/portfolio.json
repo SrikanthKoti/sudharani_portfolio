@@ -158,7 +158,8 @@
     "scheduleTitle": "Schedule Your Slot",
     "calendarPlaceholder": "Calendly Scheduling Widget will be embedded here.",
     "calendarLabel": "Open Calendar",
-    "calendarUrl": "#"
+    "calendarUrl": "#",
+    "calendlyUrl": "https://calendly.com/morampudi-maths/30min?primary_color=137fec"
   },
   "contact": {
     "label": "Get In Touch",
@@ -169,13 +170,15 @@
         "icon": "mail",
         "label": "Email Address",
         "value": "contact@sudhamath.com",
-        "type": "email"
+        "type": "email",
+        "href": "mailto:contact@sudhamath.com"
       },
       {
         "icon": "location_on",
         "label": "Address",
         "value": "Gothics pinnacle, Block - B, Simhapuri colony, Bowrampet",
-        "type": "phone"
+        "type": "phone",
+        "href": "https://maps.app.goo.gl/KCUmHqbDWa9UG99h8?g_st=ic"
       }
     ],
     "formGrades": ["Class 7", "Class 8", "Class 9", "Class 10"],
@@ -198,8 +201,8 @@
       { "href": "#contact", "label": "Contact" }
     ],
     "socialLinks": [
-      { "icon": "mail", "href": "#" },
-      { "icon": "location_on", "href": "#" }
+      { "icon": "mail", "href": "mailto:contact@sudhamath.com" },
+      { "icon": "location_on", "href": "https://maps.app.goo.gl/KCUmHqbDWa9UG99h8?g_st=ic" }
     ]
   }
 }

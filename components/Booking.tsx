@@ -1,5 +1,5 @@
+import Script from "next/script";
 import { SectionHeading } from "./ui/SectionHeading";
-import { Button } from "./ui/Button";
 import { Icon } from "./ui/Icon";
 import { Container } from "./ui/Container";
 import type { Booking as BookingData } from "@/types/portfolio";
@@ -42,21 +42,25 @@ export function Booking({ data }: BookingProps) {
             <p className="font-bold">{data.scheduleTitle}</p>
             <div className="size-3 rounded-full bg-green-500 animate-pulse" />
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center p-8 text-center gap-4">
-            <Icon
-              name="calendar_month"
-              className="text-6xl text-primary/30"
-            />
-            <p className="text-[#617589] font-medium italic">
-              {data.calendarPlaceholder}
-            </p>
-            <Button
-              href={data.calendarUrl ?? "#"}
-              variant="primary-compact"
-              className="mt-4"
-            >
-              {data.calendarLabel}
-            </Button>
+          <div className="flex-1 min-h-[700px]">
+            {data.calendlyUrl ? (
+              <>
+                <div
+                  className="calendly-inline-widget min-w-[320px] w-full h-[700px]"
+                  data-url={data.calendlyUrl}
+                />
+                <Script
+                  src="https://assets.calendly.com/assets/external/widget.js"
+                  strategy="lazyOnload"
+                />
+              </>
+            ) : (
+              <div className="flex flex-col items-center justify-center p-8 text-center gap-4 min-h-[400px]">
+                <p className="text-[#617589] dark:text-gray-400 font-medium italic">
+                  {data.calendarPlaceholder}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </Container>
