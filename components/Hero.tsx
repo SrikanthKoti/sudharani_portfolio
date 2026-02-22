@@ -66,7 +66,7 @@ export function Hero({ data, site }: HeroProps) {
               <p className="text-primary font-bold text-sm tracking-widest uppercase mb-1">
                 {site.name}
               </p>
-              <p className="text-[#111418] dark:text-white font-medium italic">
+              <p className="text-[#111418] dark:text-white text-sm sm:text-md font-medium italic">
                 &quot;{data.quote}&quot;
               </p>
             </div>

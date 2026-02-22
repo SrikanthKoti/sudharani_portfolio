@@ -18,7 +18,7 @@ export function Curriculum({ data }: CurriculumProps) {
         <div className="flex flex-col gap-4 mb-12">
           <SectionHeading label={data.label} title={data.title} />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {data.classes.map((cls) => (
             <div
               key={cls.title}

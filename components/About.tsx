@@ -38,7 +38,6 @@ export function About({ data }: AboutProps) {
           {data.featureCards.map((card, i) => (
             <Card
               key={card.title}
-              className={i % 2 === 1 ? "mt-8" : ""}
             >
               <Icon name={card.icon} className="text-primary text-3xl" />
               <h4 className="font-bold">{card.title}</h4>

@@ -284,8 +284,9 @@ export function Contact({ data }: ContactProps) {
               <Button
                 type="submit"
                 fullWidth
-                className="mt-2 py-4"
+                className="mt-2 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold"
                 disabled={isSubmitting || !isValid}
+                disableShadow={true}
               >
                 {data.formSubmitLabel}
               </Button>

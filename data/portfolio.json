@@ -3,7 +3,7 @@
     "name": "Sudha Rani Morampudi",
     "tagline": "Making mathematics simple, one concept at a time.",
     "title": "Sudha Rani Morampudi | Mathematics Teacher Portfolio",
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD8ddjee22AH4YXii_7oh-SqCQ1m0gKAzeLybWjtYsjXuov4uhVdDF0f1gmbitaReSXgXCMeqnv9jlJpwIbCwD5VeAPEdEEOsO2_OJFzi2XTYBn8z5BhOhE76G95kfQ0dODJnToftqyS6HSlmTqqJwnUye0oonL-nNrf0hxk_SSuzQqC3NoDlfTKaIiq-ofklYGhL6I-FinX1aqHfQji-S_zmoGLr-13oYyVR9slCllVvp-39zrPwd1-NXKMlE_E3zllZ-0dqomr0k",
+    "image": "/images/profile.png",
     "logoIcon": "functions"
   },
   "nav": {
@@ -113,16 +113,6 @@
         ]
       },
       {
-        "icon": "history_edu",
-        "title": "ICSE Board",
-        "description": "Comprehensive coverage of Selina/Concise Math with emphasis on logical steps.",
-        "features": [
-          "Detailed Theory explanations",
-          "Previous 10 Year Papers",
-          "Advanced logical reasoning"
-        ]
-      },
-      {
         "icon": "school",
         "title": "State Board",
         "description": "Aligned with State SCERT guidelines focusing on core fundamentals and exams.",
@@ -169,9 +159,9 @@
       {
         "icon": "mail",
         "label": "Email Address",
-        "value": "contact@sudhamath.com",
+        "value": "morampudi.maths@gmail.com",
         "type": "email",
-        "href": "mailto:contact@sudhamath.com"
+        "href": "mailto:morampudi.maths@gmail.com"
       },
       {
         "icon": "location_on",
@@ -191,7 +181,7 @@
     "formPhonePlaceholder": "Enter phone number",
     "formMessageLabel": "Message",
     "formMessagePlaceholder": "How can I help you?",
-    "formSubmitLabel": "Send Message"
+    "formSubmitLabel": "Contact on WhatsApp"
   },
   "footer": {
     "copyright": "© 2024 Sudha Rani Morampudi. All rights reserved.",
@@ -203,7 +193,7 @@
       { "href": "#contact", "label": "Contact" }
     ],
     "socialLinks": [
-      { "icon": "mail", "href": "mailto:contact@sudhamath.com" },
+      { "icon": "mail", "href": "mailto:morampudi.maths@gmail.com" },
       { "icon": "location_on", "href": "https://maps.app.goo.gl/KCUmHqbDWa9UG99h8?g_st=ic" }
     ]
   }
