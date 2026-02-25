@@ -67,7 +67,23 @@ export function Contact({ data }: ContactProps) {
     },
   });
 
-  const onSubmit = async (_values: ContactFormValues) => {
+  const onSubmit = async (values: ContactFormValues) => {
+    const message = `
+        New Booking Request
+        
+        Name: ${values.name}
+        Grade: ${values.grade}
+        Email: ${values.email}
+        Phone: ${values.phone}
+        Details: ${values.message || 'N/A'}
+  `.trim();
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
     toast.success("We'll be calling or emailing you soon!");
     reset({
       name: "",

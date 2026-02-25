@@ -181,7 +181,8 @@
     "formPhonePlaceholder": "Enter phone number",
     "formMessageLabel": "Message",
     "formMessagePlaceholder": "How can I help you?",
-    "formSubmitLabel": "Contact on WhatsApp"
+    "formSubmitLabel": "Contact on WhatsApp",
+    "whatsAppNumber" : "91XXXXXXXXXX"
   },
   "footer": {
     "copyright": "© 2024 Sudha Rani Morampudi. All rights reserved.",

@@ -127,6 +127,7 @@ export interface Contact {
   formMessageLabel: string;
   formMessagePlaceholder: string;
   formSubmitLabel: string;
+  whatsAppNumber: string;
 }
 
 export interface SocialLink {
