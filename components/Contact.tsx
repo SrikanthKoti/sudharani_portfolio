@@ -68,30 +68,47 @@ export function Contact({ data }: ContactProps) {
   });
 
   const onSubmit = async (values: ContactFormValues) => {
-    const message = `
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        toast.error("Something went wrong. Please try again.");
+        return;
+      }
+
+      const message = `
         New Booking Request
         
         Name: ${values.name}
         Grade: ${values.grade}
         Email: ${values.email}
         Phone: ${values.phone}
-        Details: ${values.message || 'N/A'}
-  `.trim();
+        Details: ${values.message || "N/A"}
+      `.trim();
 
-    const encodedMessage = encodeURIComponent(message);
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodedMessage}`;
 
-    const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodedMessage}`;
+      window.open(whatsappUrl, "_blank");
 
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
-    toast.success("We'll be calling or emailing you soon!");
-    reset({
-      name: "",
-      grade: data.formGrades[0] ?? "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+      toast.success("We'll be calling or emailing you soon!");
+      reset({
+        name: "",
+        grade: data.formGrades[0] ?? "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Failed to submit contact form:", error);
+      toast.error("Unable to submit right now. Please try again later.");
+    }
   };
 
   return (
