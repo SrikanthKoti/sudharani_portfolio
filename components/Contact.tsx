@@ -78,24 +78,9 @@ export function Contact({ data }: ContactProps) {
       });
 
       if (!response.ok) {
-        toast.error("Something went wrong. Please try again.");
+        toast.error("Something went wrong.");
         return;
       }
-
-      const message = `
-        New Booking Request
-        
-        Name: ${values.name}
-        Grade: ${values.grade}
-        Email: ${values.email}
-        Phone: ${values.phone}
-        Details: ${values.message || "N/A"}
-      `.trim();
-
-      const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodedMessage}`;
-
-      window.open(whatsappUrl, "_blank");
 
       toast.success("We'll be calling or emailing you soon!");
       reset({
@@ -107,7 +92,7 @@ export function Contact({ data }: ContactProps) {
       });
     } catch (error) {
       console.error("Failed to submit contact form:", error);
-      toast.error("Unable to submit right now. Please try again later.");
+      toast.error("Something went wrong.");
     }
   };
 

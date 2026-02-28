@@ -16,6 +16,7 @@
     "react-hook-form": "^7.71.2",
     "react-hot-toast": "^2.6.0",
     "resend": "^6.9.2",
+    "wasenderapi": "^0.4.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
